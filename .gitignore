@@ -1,0 +1,9 @@
+*.toc
+*.log
+*.pdf
+*.aux
+*.o
+*.in
+*.out
+*~
+

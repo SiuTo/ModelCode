@@ -1,0 +1,39 @@
+\subsection*{上下界网络流}
+给定网络$G=(V, E, B, C)$，满足流量平衡以及容量限制$b(u, v) \leq f(u, v) \leq c(u, v)$，求可行流。
+
+\paragraph{无源汇可行流}
+\begin{enumerate}
+	\item $V_n=V \cup \{s, t\}$
+	\item $E_n=E \cup \{\langle s, v \rangle |v\in V\} \cup \{\langle v, t \rangle|v\in V\}$
+	\item \[ \begin{cases}
+		c_n(u, v)=c(u, v)-b(u, v) &\langle u, v \rangle \in E \\
+		c_n(s, v)=\sum\limits_{\langle u, v \rangle \in E} b(u, v) & v \in V \\
+		c_n(u, t)=\sum\limits_{\langle u, v \rangle \in E} b(u, v) & u \in V \\
+	\end{cases} \]
+\end{enumerate}
+
+\paragraph{有源汇可行流}
+\begin{enumerate}
+	\item 添加边$(t, s), b(t, s)=0, c(t, s)=\infty$。
+	\item 转化为无源汇问题。
+\end{enumerate}
+
+\paragraph{有源汇最大流\textbackslash 最小流}
+\begin{enumerate}
+	\item 二分$b(t, s)$。
+	\item 转化为有源汇可行流问题。
+\end{enumerate}
+
+\subsection*{最大权闭合图}
+给定一个有向图$G=(V, E)$，求一个闭合图，即子图内的任意点的任意后继也在闭合图中，使得点权之和最大。
+
+\begin{enumerate}
+	\item $V_n=V \cup \{s, t\}$
+	\item $E_n=E \cup \{\langle s, v \rangle | v \in V, w_v>0\} \cup \{\langle v, t \rangle | v \in V, w_v<0\}$
+	\item \[ \begin{cases}
+		c(u, v)=\infty & \langle s, v \rangle \in E \\
+		c(s, v)=w_v & w_v>0 \\
+		c(v, t)=-w_v & w_v<0 \\
+	\end{cases} \]
+\end{enumerate}
+

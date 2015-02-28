@@ -1,0 +1,79 @@
+\subsection*{input}
+\begin{lstlisting}
+#include <cstdio>
+int sscanf ( const char * s, const char * format, ...);
+
+#include <sstream>
+istringstream sin(str);
+sin>>x;
+
+ios_base::sync_with_stdio(false);
+\end{lstlisting}
+
+\subsection*{cstring}
+\begin{lstlisting}
+char * strcpy ( char * destination, const char * source );
+int strcmp ( const char * str1, const char * str2 );
+size_t strlen ( const char * str );
+\end{lstlisting}
+
+\subsection*{string}
+\begin{lstlisting}
+static const size_t npos = -1;
+string& insert (size_t pos, const string& str);
+string& erase (size_t pos = 0, size_t len = npos);
+string& replace (size_t pos,  size_t len,  const string& str);
+const char* c_str() const;
+size_t find (const string& str, size_t pos = 0) const;
+string substr (size_t pos = 0, size_t len = npos) const;
+int compare (const string& str) const;
+int stoi (const string&  str, size_t* idx = 0, int base = 10);
+string to_string (T val);
+\end{lstlisting}
+
+\subsection*{functional}
+\begin{lstlisting}
+template <class T> struct greater : binary_function <T,T,bool> {
+  bool operator() (const T& x, const T& y) const {return x>y;}
+};
+\end{lstlisting}
+
+\subsection*{cctype}
+\begin{lstlisting}
+int isdigit ( int c );
+int isalpha ( int c );
+int tolower ( int c );
+int toupper ( int c );
+\end{lstlisting}
+
+\subsection*{algorithm}
+\begin{lstlisting}
+Iterator lower_bound (Iterator first, Iterator last, const T& val);
+//Find the first element in the range [first,last) which does not compare less than val.
+Iterator upper_bound (Iterator first, Iterator last, const T& val);
+//find first element in the range [first,last) which compares greater than val.
+void reverse (Iterator first, Iterator last);
+Iterator unique (Iterator first, Iterator last);
+//Removes all but the first element from every consecutive group of equivalent elements in the range [first,last).
+\end{lstlisting}
+
+\subsection*{bitset}
+\begin{lstlisting}
+bitset();
+bitset<N> operator& (const bitset<N>& lhs, const bitset<N>& rhs);
+bool operator[] (size_t pos) const;
+reference operator[] (size_t pos);
+size_t count() const;
+bitset& set();
+bitset& set (size_t pos, bool val = true);
+bitset& reset();
+bitset& reset (size_t pos);
+bitset& flip();
+bitset& flip (size_t pos);
+\end{lstlisting}
+
+\subsection*{map AND set}
+\begin{lstlisting}
+insert erase clear lower_bound upper_bound
+\end{lstlisting}
+

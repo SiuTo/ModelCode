@@ -1,0 +1,105 @@
+\documentclass[a4paper, twocolumn, landscape]{article}
+
+\usepackage{listings}
+\usepackage{xeCJK}
+\usepackage{amsmath}
+\usepackage[margin=40pt]{geometry}
+
+\setlength{\columnsep}{30pt}
+
+\setCJKmainfont[BoldFont={方正黑体_GBK}, ItalicFont={方正楷体_GBK}]{方正书宋_GBK}
+\setCJKsansfont{方正黑体_GBK}
+\setCJKmonofont{方正仿宋_GBK}
+
+\lstset{
+	language=c++,
+	basicstyle=\ttfamily,
+	numbers=left,
+	numberstyle=\tiny,
+	breaklines=true,
+	tabsize=4,
+	showstringspaces=true
+}
+
+\title{\textbf{Model Code}}
+\author{Xiaotao Liang}
+\date{\today}
+
+\begin{document}
+\small
+\maketitle
+\tableofcontents
+
+\part{String}
+\section{KMP}
+\lstinputlisting{code/string/kmp.cpp}
+\section{exKMP}
+\lstinputlisting{code/string/exkmp.cpp}
+\section{Boyer-Moore}
+\lstinputlisting{code/string/BM.cpp}
+\section{Palindrome String}
+\lstinputlisting{code/string/palindrome_string.cpp}
+\section{Suffix Array}
+\lstinputlisting{code/string/suffix_array.cpp}
+\section{Suffix Automation}
+\lstinputlisting{code/string/suffix_automation.cpp}
+\section{AC Automation}
+\lstinputlisting{code/string/ac_automation.cpp}
+\section{Min Representation}
+\lstinputlisting{code/string/min_representation.cpp}
+
+\part{Data Structure}
+\section{RMQ}
+\lstinputlisting{code/data_structure/rmq.cpp}
+\section{Partition Tree}
+\lstinputlisting{code/data_structure/partition_tree.cpp}
+\section{Splay}
+\lstinputlisting{code/data_structure/balanced_tree/splay.cpp}
+\section{Size-balanced Tree}
+\lstinputlisting{code/data_structure/balanced_tree/SBT.pas}
+
+\part{Math}
+\section{Formula}
+\input{code/math/formula.tex}
+\section{Fourier}
+\lstinputlisting{code/math/fourier.cpp}
+\section{Fractional Programming}
+\input{code/math/frac_program.tex}
+\section{Polya}
+\input{code/math/polya.tex}
+\section{Expression}
+\lstinputlisting{code/math/expression.cpp}
+
+\part{Graph}
+\section{LCA}
+\lstinputlisting{code/graph/LCA.cpp}
+\section{Maxflow}
+\input{code/graph/maxflow.tex}
+\lstinputlisting{code/graph/maxflow.cpp}
+\section{KM}
+\lstinputlisting{code/graph/KM.cpp}
+\section{2-SAT}
+\lstinputlisting{code/graph/2-SAT.cpp}
+\section{Cut-vertex}
+\lstinputlisting{code/graph/cut_vertex.cpp}
+
+\part{Computing Geometry}
+\section{Segment Cross}
+\lstinputlisting{code/computing_geometry/segcross.cpp}
+
+\part{Others}
+\section{Mergesort}
+\lstinputlisting{code/mergesort.cpp}
+
+\part{Programming Languages}
+\section{c++}
+\input{code/c++.tex}
+
+\section{Java}
+\subsection*{Input}
+\lstinputlisting{code/java/InputOutput.java}
+\subsection*{BigInteger}
+\lstinputlisting{code/java/bigInteger.tex}
+
+\end{document}
+

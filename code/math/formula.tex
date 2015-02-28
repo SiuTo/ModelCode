@@ -1,0 +1,31 @@
+\paragraph{Sum}
+\begin{align*}
+	\sum_{i=1}^n i^2 &= \frac{1}{6}n(n+1)(2n+1) \\
+	\sum_{i=1}^n i^3 &= \Big[\frac{n(n+1)}{2}\Big]^2 \\
+	\sum_{i=1}^n i^4 &= \frac{6n^5+15n^4+10n^3-n}{30} \\
+	\sum_{i=1}^n i^5 &= \frac{2n^6+6n^5+5n^4-n^2}{12} 
+\end{align*}
+
+\paragraph{Fibonacci}
+\[ F_n=\begin{cases}
+	0 & n=0 \\
+	1 & n=1 \\
+	F_{n-1}+F_{n-2} & n \geq 2 \\
+\end{cases} \]
+\[ F_n=\frac{1}{\sqrt{5}}\Big[\Big(\frac{1+\sqrt{5}}{2}\Big)^n-\Big(\frac{1-\sqrt{5}}{2}\Big)^n\Big] \]
+
+\paragraph{Catalan}
+\[ C_n=\begin{cases}
+	0 & n=0 \\
+	\sum\limits_{i=0}^{n-1} C_i C_{n-1-i} & n \geq 1 \\
+\end{cases} \]
+\[ C_n= \Big(\begin{array}{c} 2n\\n \end{array} \Big) - \Big(\begin{array}{c} 2n\\(n+1) \end{array} \Big) = \frac{1}{n+1}\Big(\begin{array}{c} 2n\\n \end{array} \Big) \]
+
+\paragraph{错排}
+\[ D_n=\begin{cases}
+	0 & n=1 \\
+	1 & n=2 \\
+	(n-1)(D_{n-1}+D_{n-2}) & n \geq 2 \\
+\end{cases} \]
+\[ D_n=n!\Big(1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+ \dots +(-1)^n\frac{1}{n!} \Big) \]
+
